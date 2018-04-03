@@ -1,0 +1,5 @@
+G:\visual studio neha program\crudapp\crudapp\bin\crudapp.dll
+G:\visual studio neha program\crudapp\crudapp\bin\crudapp.pdb
+G:\visual studio neha program\crudapp\crudapp\obj\Debug\crudapp.csprojResolveAssemblyReference.cache
+G:\visual studio neha program\crudapp\crudapp\obj\Debug\crudapp.dll
+G:\visual studio neha program\crudapp\crudapp\obj\Debug\crudapp.pdb

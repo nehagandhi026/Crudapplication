@@ -1,0 +1,56 @@
+﻿@model crudapp.Models.employee
+
+
+
+<h2>Save</h2>
+
+@using (Html.BeginForm("Save", "Home", FormMethod.Post, new { id = "popupForm" }))
+{
+    if (Model != null && Model.Id > 0)
+    {
+        @Html.HiddenFor(a => a.Id)
+    }   
+    
+
+    <fieldset>
+        <legend>employee</legend>
+
+        <div class="form-group">
+        <label>First Name</label>
+        @Html.TextBoxFor(a=>a.First_name,new { @class = "form-control" })
+        @Html.ValidationMessageFor(a=>a.First_name)
+    </div>
+
+        <div class="form-group">
+        <label>Last Name</label>
+        @Html.TextBoxFor(a => a.Lastname, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.Lastname)
+    </div>
+
+        <div class="form-group">
+        <label>City</label>
+        @Html.TextBoxFor(a => a.city, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.city)
+    </div>
+
+        <div class="form-group">
+        <label>Contact</label>
+        @Html.TextBoxFor(a => a.contact, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.contact)
+    </div>
+
+      <div class="form-group">
+        <label>salary</label>
+        @Html.TextBoxFor(a => a.salary, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.salary)
+    </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

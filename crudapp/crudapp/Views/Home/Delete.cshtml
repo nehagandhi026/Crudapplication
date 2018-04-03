@@ -1,0 +1,53 @@
+﻿@model crudapp.Models.employee
+
+<h3>Are you sure you want to delete this?</h3>
+@using (Html.BeginForm("Delete", "Home", FormMethod.Post, new { id = "popupForm" }))
+{
+    @Html.HiddenFor(a=>a.Id)
+<fieldset>
+    <legend>employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.First_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.First_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Lastname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Lastname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.city)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.city)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.contact)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contact)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.salary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.salary)
+    </div>
+     <p>
+        <input type="submit" value="Delete" />
+     </p>
+   
+</fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
